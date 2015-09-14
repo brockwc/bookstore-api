@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  # To be compatible with JSON API URLs, we need to separate multiple words with dashes – 
+  # not underscores. This is how we tell Rails the path we want
+  resources :publishing_houses, :path => '/publishing-houses'
+  resources :authors
+  resources :books
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
