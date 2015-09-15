@@ -1,5 +1,7 @@
 class BookSerializer < ActiveModel::Serializer
   attributes :id, :title, :price
+  belongs_to :author
+  belongs_to :publisher
 end
-  attribute :author
-  attribute :publisher
+  # attribute :author
+  # attribute :publisher
